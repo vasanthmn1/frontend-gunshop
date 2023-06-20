@@ -20,7 +20,7 @@ const Cart = () => {
     const handlePay = async () => {
         const stripe = await getStripe()
 
-        const response = await axios.post(`http://localhost:8000/create-checkout-session`, {
+        const response = await axios.post(`${serverlink}/create-checkout-session`, {
             cartItems: cartItems
         })
         if (response.status === 500) return;

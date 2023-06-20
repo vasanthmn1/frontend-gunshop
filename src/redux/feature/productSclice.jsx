@@ -12,17 +12,12 @@ const ProductSlice = createSlice({
     initialState,
     reducers: {
         addpro: (state, action) => {
-            // const product = action.payload;
-            const { quantity, product } = action.payload;
-            console.log(product, "s");
-            console.log(state.totalPrice);
 
+            const { quantity, product } = action.payload;
 
             const checkProductIncart = state.cartItems.find((item) => item._id === product._id);
 
-            // state.totalPrice = state.totalPrice + product.price;
 
-            // state.totalQuantity = state.totalQuantity + quantity;
             const priceToAdd = product.price * quantity;
 
             state.totalPrice += priceToAdd;
@@ -47,7 +42,7 @@ const ProductSlice = createSlice({
         },
         removecart: (state, action) => {
             const productId = action.payload;
-            console.log(action.payload)
+
             const foundProductIndex = state.cartItems.findIndex((item) => item._id === productId._id);
 
             if (foundProductIndex !== -1) {
@@ -62,23 +57,7 @@ const ProductSlice = createSlice({
         },
         toggleCartItemQuanitity: (state, action) => {
 
-            // const id = action.payload
-            // const value = action.payload
-            // foundProduct = state.cartItems.find((item) => item._id === id)
-            // index = state.cartItems.findIndex((product) => product._id === id);
-            // const newCartItems = state.cartItems.filter((item) => item._id !== id)
 
-            // if (value === 'inc') {
-            //     state.cartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity + 1 }]);
-            //     state.totalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price)
-            //     state.totalQuantity(prevTotalQuantities => prevTotalQuantities + 1)
-            // } else if (value === 'dec') {
-            //     if (foundProduct.quantity > 1) {
-            //         setCartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity - 1 }]);
-            //         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price)
-            //         setTotalQuantities(prevTotalQuantities => prevTotalQuantities - 1)
-            //     }
-            // }
 
             const { id, value } = action.payload;
             const foundProduct = state.cartItems.find((item) => item._id === id);
@@ -98,22 +77,17 @@ const ProductSlice = createSlice({
             }
         },
         incQut: (state, action) => {
-            // state.qun = (((prevQty) => prevQty + 1))
-            // console.log(state.qun);
+
             state.qun = state.qun + 1
-            // state.totalPrice += price
+
         },
         decQut: (state, action) => {
-            // state.qun((prevQty) => {
-            //     if (prevQty - 1 < 1) return 1;
 
-            //     return prevQty - 1;
-            // });
             state.qun = state.qun - 1 < 1 ? 1 : state.qun - 1;
         },
         showcarttoggle: (state, action) => {
             state.showcart = action.payload
-            console.log(state.showcart);
+
         }
     }
 })
