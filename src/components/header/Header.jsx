@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineShopping } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
-import { showcarttoggle } from '../../redux/feature/ProductSclice'
+import { showcarttoggle } from '../../redux/features/productSclice'
 import Cart from '../cart/Cart'
 const Header = () => {
     const dispatch = useDispatch()

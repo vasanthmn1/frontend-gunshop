@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
 import toast from 'react-hot-toast';
-import { removecart, showcarttoggle, toggleCartItemQuanitity } from '../../redux/feature/ProductSclice';
+import { removecart, showcarttoggle, toggleCartItemQuanitity } from '../../redux/features/productSclice';
 import { Link } from 'react-router-dom';
 import { urlFor } from '../../../lib/client';
 import getStripe from '../../../lib/getStripe';

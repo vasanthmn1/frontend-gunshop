@@ -1,32 +1,4 @@
-// import React from 'react'
-// import { client } from '../../../lib/client';
 
-// const Home = ({ products }) => {
-//     console.log(products);
-//     return (
-//         <div>
-//             <div className='products-heading'>
-//                 <h2>Best Seller Guns</h2>
-//                 <p>Choose any Variations</p>
-
-//             </div>
-//         </div>
-//     )
-// }
-
-// export const getServerSideProps = async () => {
-//     const query = '*[_type == "product"]';
-//     const products = await client.fetch(query);
-
-//     const bannerQuery = '*[_type == "banner"]';
-//     const bannerData = await client.fetch(bannerQuery);
-
-//     return {
-//         props: { products, }
-//     }
-// }
-// // bannerData
-// export default Home
 
 import React, { useEffect, useState } from 'react';
 import { client } from '../../../lib/client';

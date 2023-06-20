@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { client, urlFor } from '../../../lib/client'
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
-import { addpro, decQut, incQut, showcarttoggle } from '../../redux/feature/ProductSclice';
+import { addpro, decQut, incQut, showcarttoggle } from '../../redux/features/productSclice';
 import { Toaster, toast } from 'react-hot-toast';
 const Product = () => {
 
