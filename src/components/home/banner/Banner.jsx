@@ -14,17 +14,12 @@ const Banner = () => {
         };
         getServerSideProps()
     }, [])
-    console.log(banner[0]);
-    console.log(banner[0] && banner[0]?.image.asset._ref);
-    // url("IMAGE_URL"), linear-gradient(#eb01a5, #d13531)
 
     return (
-        // <div className={classes.banner_container}>
         <>
             {
                 banner.length && banner[0] ?
                     <div className={classes.banner_container} style={{
-                        // backgroundImage: `url(${urlFor(banner[0]?.image).url()})`
                         backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.2),RGB(0, 0, 0)),url(${urlFor(banner[0]?.image).url()})`
 
                     }}>

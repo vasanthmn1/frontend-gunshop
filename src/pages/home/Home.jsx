@@ -42,16 +42,10 @@ const Home = () => {
             const query = '*[_type == "product"]';
             const products = await client.fetch(query);
             Setproducts(products)
-            // const bannerQuery = '*[_type == "banner"]';
-            // const bannerData = await client.fetch(bannerQuery);
-            // SetBanners(bannerData)
-            // return {
-            //     props: { products }
-            // };
         };
         getServerSideProps()
     }, [])
-    console.log(products);
+
 
     return (
         <div>
