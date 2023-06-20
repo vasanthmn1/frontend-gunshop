@@ -1,0 +1,78 @@
+.banner_container{
+    padding: 100px 40px;
+    /* background-color: #dcdcdc; */
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+    border-radius: 15px;
+    position: relative;
+    height: 500px;
+    line-height: 0.9; 
+    width: 100%;
+    
+  /* margin: 0 auto; */
+  }
+  .banner_container .beats_solo{
+    font-size: 20px;
+  }
+  .banner_container button{
+     border-radius: 15px;
+    padding: 10px 16px;
+    background-color: #015AFF;
+    color: white;
+    border: none;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index:10000 !important;
+  }
+  
+  .banner_container h3{
+    font-size: 4rem;
+    color: #015AFF ;
+    margin-left: -10px;
+
+    margin-top: 4px;
+  }
+  .banner_container p{
+    color: rgb(255, 255, 255);
+
+  }
+  .banner_container h1{
+    color: rgb(255, 255, 255);
+    font-size: 10em;
+    margin-left: -20px;
+    text-transform: uppercase;
+  }
+  .banner-image{
+    position: absolute;
+    top: 0%;
+    right:20%;
+    width: 450px;
+    height: 450px;
+  }
+
+  .desc{
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+    width: 300px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+     color: #fff;
+    
+    }
+    .desc p{
+  color: #fff;
+      font-weight: 100;
+    text-align: end;
+    }
+    .desc h5{
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      /* color: black; */
+      align-self: flex-end;
+    }
