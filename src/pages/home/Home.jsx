@@ -18,7 +18,7 @@ const Home = () => {
         getServerSideProps()
     }, [])
 
-    console.log(products[2]);
+
     return (
         <div>
             <Banner products={products[1]} />

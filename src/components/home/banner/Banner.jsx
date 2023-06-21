@@ -14,7 +14,6 @@ const Banner = ({ products }) => {
         };
         getServerSideProps()
     }, [])
-    console.log(products?.slug);
     return (
         <>
             {
