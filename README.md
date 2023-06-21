@@ -6,4 +6,4 @@ Technologies: React.js, Santio UI React, Stripe, HTML5, CSS3, JavaScript ES6, No
 
 Installation: Clone repo, install dependencies, set up Stripe API keys and MongoDB connection, start the development server.
 
-[Demo](link-to-demo) | [Documentation](link-to-docs)
+[Demo](magical-melba-799351.netlify.app/) 
