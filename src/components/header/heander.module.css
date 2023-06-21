@@ -43,3 +43,10 @@
     color:#015AFF ;
 }
   
+@media screen and (max-width:900px) {
+  .navbar_container{
+ 
+    margin-bottom: 0px;
+  }
+
+}
