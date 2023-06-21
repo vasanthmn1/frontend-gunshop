@@ -12,7 +12,7 @@ const Layout = () => {
                 <RouterPage />
 
             </main>
-            <Footer />
+
         </div>
     )
 }

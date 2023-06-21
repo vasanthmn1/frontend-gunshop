@@ -1,0 +1,222 @@
+
+.quantity_desc .minus{
+  color: #FFF;
+padding: 5px;
+  background-color: #e10007;
+  /* border-radius: 47% 51% 25% 25% / 75% 75% 25% 25%; */
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.quantity_desc .num{
+  font-size: 20px;
+  padding: 0 5px;
+
+}
+.quantity_desc .plus{
+    padding: 5px;
+    cursor: pointer;
+
+    border-radius: 5px;
+background-color: #015AFF;
+color: #FFF;
+}
+.btn{
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 12px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    background-color: #015AFF;
+    color: #fff;
+    cursor: pointer;
+      transform: scale(1, 1);
+    transition: transform 0.5s ease;
+  }
+  .btn:hover{
+    transform: scale(1.1,1.1);
+  }
+
+  .remove_item{
+    font-size: 24px;
+    color: #015AFF;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .cart_bottom{
+    position: absolute;
+    bottom: 12px;
+    /* right: 5px; */
+  width: 100%;
+  padding: 30px 65px;
+  border-top: 2px solid rgb(6, 5, 5);
+  
+  }
+  
+  .btn_container{
+    width: 400px;
+    margin: auto;
+  }
+  .total h3{
+    font-size: 22px;
+  
+  }
+
+  .item_desc .flex{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+     color: #324d67;
+  
+  }
+  .item_desc .bottom{
+    margin-top: 60px;
+  }
+  .flex h5{
+    font-size: 24px;
+  }
+  .flex h4{
+    font-size: 20px;
+  }
+  .total{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
+  .product_container{
+    margin-top: 15px;
+    overflow: auto;
+  max-height: 70vh;
+  padding: 20px 10px;
+  }
+  .product{
+    display: flex;
+   gap: 30px;
+    padding: 20px;
+  }
+  .product .cart_product_image{
+    width:180px ;
+    height: 150px;
+      border-radius: 15px;
+   background-color: #ebebeb;
+  }
+
+  .cart_container{
+    height: 100vh;
+    width: 600px;
+    background-color: white;
+    float: right;
+    padding: 40px 10px;
+    position: relative;
+    
+  }
+  .cart_wrapper{
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  
+    transition: all 1s ease-in-out;
+  
+  }
+
+  .cart_heading{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    gap: 2px;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .cart_heading .heading{
+    margin-left: 10px;
+  }
+  .cart_num_items{
+    margin-left: 10px;
+    color: #015AFF;
+  }
+  .empty_cart{
+    margin:40px;
+    text-align:center;
+  }
+  .empty_cart h3{
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .cancel{
+    cursor: pointer;
+  }
+
+
+  @media screen and (max-width:800px) {
+    .product_detail_container{
+        flex-wrap: wrap;
+        }
+        .desc{
+            bottom: 60px;
+           }
+           .product_detail_container{
+             flex-wrap: wrap;
+             }
+           .product_detail-container .product_detail_image{
+             width: 350px;
+             height: 350px;
+           }
+           .cart-container{
+             width: 415px;
+           padding: 4px;
+           }
+           .cart-heading{
+             margin-top: 35px;
+           }
+           .product_container{
+             margin-top: 10px;
+           }
+           .product{
+             padding: 20px 5px;
+         
+           }
+           .product .cart_product_image{
+             width: 25%;
+             height: 25%;
+           }
+           .buttons .add_to_cart{
+             width: 150px;
+           }
+           .buttons .buy_now{
+             width: 150px;
+           }
+           .product_detail_container{
+             margin: 20px;
+           }
+      .item_desc .bottom{
+        margin-top: 30px;
+      }
+      .flex h5{
+        font-size: 16px;
+         color: #324d67;
+      }
+      .flex h4{
+        font-size: 16px;
+         color: black;
+      }
+      .cart_bottom{
+        padding: 30px;
+      }
+      
+      .total h3{
+        font-size: 20px;
+      }
+  }

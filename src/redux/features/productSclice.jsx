@@ -57,22 +57,22 @@ const ProductSlice = createSlice({
         },
         toggleCartItemQuanitity: (state, action) => {
 
-
-
             const { id, value } = action.payload;
-            const foundProduct = state.cartItems.find((item) => item._id === id);
-            const index = state.cartItems.findIndex((product) => product._id === id);
-            const newCartItems = state.cartItems.filter((item) => item._id !== id);
+            const foundProductIndex = state.cartItems.findIndex((item) => item._id === id);
 
-            if (value === 'inc') {
-                state.cartItems = [...newCartItems, { ...foundProduct, quantity: foundProduct.quantity + 1 }];
-                state.totalPrice += foundProduct.price;
-                state.totalQuantity += 1;
-            } else if (value === 'dec') {
-                if (foundProduct.quantity > 1) {
-                    state.cartItems = [...newCartItems, { ...foundProduct, quantity: foundProduct.quantity - 1 }];
-                    state.totalPrice -= foundProduct.price;
-                    state.totalQuantity -= 1;
+            if (foundProductIndex !== -1) {
+                const foundProduct = state.cartItems[foundProductIndex];
+
+                if (value === 'inc') {
+                    state.cartItems[foundProductIndex] = { ...foundProduct, quantity: foundProduct.quantity + 1 };
+                    state.totalPrice += foundProduct.price;
+                    state.totalQuantity += 1;
+                } else if (value === 'dec') {
+                    if (foundProduct.quantity > 1) {
+                        state.cartItems[foundProductIndex] = { ...foundProduct, quantity: foundProduct.quantity - 1 };
+                        state.totalPrice -= foundProduct.price;
+                        state.totalQuantity -= 1;
+                    }
                 }
             }
         },
@@ -88,9 +88,14 @@ const ProductSlice = createSlice({
         showcarttoggle: (state, action) => {
             state.showcart = action.payload
 
+        },
+        empetycartItem: (state, action) => {
+            state.cartItems = [],
+                state.totalPrice = 0,
+                state.totalQuantity = 0
         }
     }
 })
-export const { addpro, removecart, toggleCartItemQuanitity, incQut, decQut, showcarttoggle } = ProductSlice.actions
+export const { addpro, removecart, toggleCartItemQuanitity, incQut, decQut, showcarttoggle, empetycartItem } = ProductSlice.actions
 
 export default ProductSlice.reducer

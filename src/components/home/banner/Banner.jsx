@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import classes from './banner.module.css'
 // import { client } from '../../../lib/client';
 
-const Banner = () => {
+const Banner = ({ products }) => {
     const [banner, SetBanners] = useState([])
     useEffect(() => {
         const getServerSideProps = async () => {
@@ -14,7 +14,7 @@ const Banner = () => {
         };
         getServerSideProps()
     }, [])
-
+    console.log(products?.slug);
     return (
         <>
             {
@@ -24,13 +24,15 @@ const Banner = () => {
 
                     }}>
                         <p className={classes.beats_solo}>{banner[0].smallText}</p>
-                        <h3>{banner[0].midText}sss</h3>
+                        <h3>{banner[0].midText}</h3>
                         <h1>{banner[0].largeText1}</h1>
-                        {/* <img src={urlFor(banner[0]?.image).url()} alt="banner" className={classes.banner_image} /> */}
+
                         <div>
-                            <Link href={`/product/${banner[0].product}`}>
+                            <Link to={`product/${products?.slug.current}`}>
                                 <button type="button">{banner[0].buttonText}</button>
                             </Link>
+
+
                             <div className={classes.desc}>
                                 <h5>Description</h5>
                                 <p>{banner[0].desc}</p>

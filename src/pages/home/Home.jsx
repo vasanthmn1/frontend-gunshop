@@ -18,10 +18,10 @@ const Home = () => {
         getServerSideProps()
     }, [])
 
-
+    console.log(products[2]);
     return (
         <div>
-            <Banner />
+            <Banner products={products[1]} />
             <div className='products-heading'>
                 <h2>Best Seller Guns</h2>
                 <p>Choose any Variations</p>

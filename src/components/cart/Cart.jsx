@@ -13,7 +13,6 @@ const Cart = () => {
     const { cartItems, showcart, totalPrice, totalQuantity } = useSelector((state) => state.product)
 
     const serverlink = import.meta.env.VITE_BACKEND_LINK
-    console.log(serverlink);
     const dispatch = useDispatch()
 
 
