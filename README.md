@@ -7,3 +7,4 @@ Technologies: React.js, Santio UI React, Stripe, HTML5, CSS3, JavaScript ES6, No
 
 
 [Demo]((https://magical-melba-799351.netlify.app/)) 
+[Demo]([https://example.com](https://magical-melba-799351.netlify.app/)https://magical-melba-799351.netlify.app/)
